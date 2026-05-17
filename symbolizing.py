@@ -48,8 +48,8 @@ def symbolize_deflate(lz77_tokens):
             deflate_symbols.append(("LIT", token[1]))
             
         elif token[0] == "Match":
-            distance = token[1]
-            length = token[2]
+            length = token[1]
+            distance = token[2]
             
             # Process Length
             len_code, len_ext_bits, len_ext_val = get_length_symbol(length)
